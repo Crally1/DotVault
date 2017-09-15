@@ -44,17 +44,17 @@ Plug 'mhinz/vim-startify'
 
 Plug 'mkitt/tabline.vim'
 
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'andreasvc/vim-256noir'
+
+Plug 'ewilazarus/preto'
+
 call plug#end()
 
-colorscheme PaperColor
+colorscheme preto
 
-set background=light
-
-highlight Normal ctermbg=1021
-highlight LineNr ctermbg=1021
-highlight NonText ctermbg=1021
-
-let g:airline_theme='papercolor'
+let g:airline_theme='jellybeans'
 
 let g:PaperColor_Theme_Options = {
   \   'language': {
