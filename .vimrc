@@ -24,6 +24,9 @@ noremap <S-l> :tabnext<CR>
 noremap <S-j> :tabnew<CR>
 noremap <S-k> :tabclose<CR>
 
+noremap <S-t> :NERDTreeTabsToggle<CR>
+noremap <S-y> :NERDTreeFocusToggle<CR> 
+
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
@@ -50,11 +53,31 @@ Plug 'andreasvc/vim-256noir'
 
 Plug 'ewilazarus/preto'
 
+Plug 'scrooloose/nerdtree'
+
+Plug 'jistr/vim-nerdtree-tabs'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'octol/vim-cpp-enhanced-highlight'
+
 call plug#end()
 
-colorscheme preto
+colorscheme PaperColor
 
-let g:airline_theme='jellybeans'
+let g:gruvbox_contrast_light='medium'
+
+let g:airline_theme='papercolor'
+
+let g:airline_powerline_fonts = 1
+
+let g:ctrlp_show_hidden = 1
+
+let g:cpp_class_scope_highlight = 1
+
+let g:cpp_member_variable_highlight = 1
 
 let g:PaperColor_Theme_Options = {
   \   'language': {
