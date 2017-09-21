@@ -24,10 +24,18 @@ noremap <S-l> :tabnext<CR>
 noremap <S-j> :tabnew<CR>
 noremap <S-k> :tabclose<CR>
 
+:tnoremap <Esc> <C-\><C-n>
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+:tnoremap <C-h> <C-\><C-N><C-w>h
+:tnoremap <C-j> <C-\><C-N><C-w>j
+:tnoremap <C-k> <C-\><C-N><C-w>k
+:tnoremap <C-l> <C-\><C-N><C-w>l
+
+noremap <C-x> <C-\><C-n>:q<CR>
 
 noremap <S-t> :NERDTreeTabsToggle<CR>
 noremap <S-y> :NERDTreeFocusToggle<CR> 
@@ -35,6 +43,8 @@ noremap <S-y> :NERDTreeFocusToggle<CR>
 noremap <S-n> :TagbarToggle<CR>
 
 noremap <S-u> :A<CR>
+
+noremap <C-y> :split<CR><C-w>j:terminal<CR><C-\><C-n>:resize 10<CR>i
 
 call plug#begin()
 
@@ -68,15 +78,15 @@ Plug 'whatyouhide/vim-gotham'
 
 Plug 'majutsushi/tagbar'
 
+Plug 'kassio/neoterm'
+
 call plug#end()
 
 colorscheme PaperColor
 
 set background=dark
 
-let g:ycm_show_diagnostics_ui = 0
-
-let g:ycm_server_python_interpreter='/usr/bin/python2'
+let g:neoterm_size = 10
 
 let g:airline_theme='dark'
 
@@ -105,3 +115,4 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
+
