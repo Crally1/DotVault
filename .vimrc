@@ -81,6 +81,6 @@ set background=dark
 
 "let g:airline_theme='lucius'
 
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 let g:ctrlp_show_hidden = 1
