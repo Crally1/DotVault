@@ -62,8 +62,6 @@ Plug 'majutsushi/tagbar'
 
 Plug 'morhetz/gruvbox'
 
-Plug 'davidhalter/jedi-vim'
-
 call plug#end()
 
 let g:PaperColor_Theme_Options = {
@@ -81,6 +79,6 @@ set background=dark
 
 "let g:airline_theme='lucius'
 
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 let g:ctrlp_show_hidden = 1
