@@ -5,8 +5,9 @@ set termencoding=utf-8
 set completeopt-=preview
 
 set autoindent
-
 set smartindent
+set cindent
+set cinoptions=g-1
 
 set tabstop=4
 set shiftwidth=4
@@ -24,15 +25,13 @@ noremap <S-l> :tabnext<CR>
 noremap <S-j> :tabnew<CR>
 noremap <S-k> :tabclose<CR>
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-h> :A<CR>
+nnoremap <C-j> :YcmCompleter GoToDeclaration<CR>
+nnoremap <C-k> :YcmCompleter GoToDefinition<CR>
+nnoremap <C-l> :YcmCompleter GoToInclude<CR> 
 
 noremap <S-t> :NERDTreeTabsToggle<CR>
 noremap <S-y> :NERDTreeFocusToggle<CR> 
-
-noremap <S-n> :TagbarToggle<CR>
 
 noremap <S-u> :A<CR>
 
@@ -58,9 +57,11 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'majutsushi/tagbar'
-
 Plug 'morhetz/gruvbox'
+
+Plug 'Valloric/YouCompleteMe'
+
+Plug 'fxn/vim-monochrome'
 
 call plug#end()
 
@@ -73,7 +74,7 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 
-"colorscheme PaperColor
+colorscheme monochrome
 
 set background=dark
 
