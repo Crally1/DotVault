@@ -20,6 +20,8 @@ set number
 
 set showmatch
 
+filetype plugin on
+
 noremap <S-h> :tabprevious<CR>
 noremap <S-l> :tabnext<CR>
 noremap <S-j> :tabnew<CR>
@@ -29,6 +31,8 @@ nnoremap <C-h> :A<CR>
 nnoremap <C-j> :YcmCompleter GoToDeclaration<CR>
 nnoremap <C-k> :YcmCompleter GoToDefinition<CR>
 nnoremap <C-l> :YcmCompleter GoToInclude<CR> 
+
+noremap <C-u> :call NERDComment('n', 'toggle')<CR>j
 
 noremap <S-t> :NERDTreeTabsToggle<CR>
 noremap <S-y> :NERDTreeFocusToggle<CR> 
@@ -63,6 +67,10 @@ Plug 'Valloric/YouCompleteMe'
 
 Plug 'fxn/vim-monochrome'
 
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'agude/vim-eldar'
+
 call plug#end()
 
 let g:PaperColor_Theme_Options = {
@@ -74,12 +82,14 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 
-colorscheme monochrome
+colorscheme eldar
 
 set background=dark
 
-"let g:airline_theme='lucius'
+let g:airline_theme='lucius'
 
 let g:airline_powerline_fonts = 1
 
 let g:ctrlp_show_hidden = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
