@@ -67,7 +67,9 @@ Plug 'fxn/vim-monochrome'
 
 Plug 'scrooloose/nerdcommenter'
 
-Plug 'agude/vim-eldar'
+Plug 'sjl/badwolf'
+
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -80,7 +82,7 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 
-colorscheme eldar
+colorscheme badwolf
 
 set background=dark
 
