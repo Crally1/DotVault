@@ -57,13 +57,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'jistr/vim-nerdtree-tabs'
 
-Plug 'tpope/vim-fugitive'
-
 Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'morhetz/gruvbox'
-
-Plug 'fxn/vim-monochrome'
 
 Plug 'scrooloose/nerdcommenter'
 
